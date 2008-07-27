@@ -1,14 +1,15 @@
 Name: sound-theme-freedesktop
 Version: 0.1
 Release: %mkrel 1
-Summary: freedesktop.org sound theme
-Group: User Interface/Desktops
+Summary: freedesktop.org default sound theme
+Group: System/X11
 Source0: http://0pointer.de/public/sound-theme-freedesktop.tar.gz
 # For details on the licenses used, see README
 License: GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
 Url: http://0pointer.de/public/sound-theme-freedesktop.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch: noarch
+Provides: fdo-sound-theme
 
 %description
 The default freedesktop.org sound theme following the XDG theming
