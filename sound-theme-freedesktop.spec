@@ -1,6 +1,6 @@
 Name: sound-theme-freedesktop
 Version: 0.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: freedesktop.org default sound theme
 Group: System/X11
 Source0: http://0pointer.de/public/sound-theme-freedesktop.tar.gz
@@ -28,13 +28,16 @@ cp -av index.theme stereo/ %{buildroot}%{_datadir}/sounds/freedesktop
 %clean
 rm -rf %{buildroot}
 
-# (cg) libcanberra will auto-reload themes if the folder is
-# touched, so these scripts achieve that goal.
+# (cg) libcanberra will purge it's cache and reload it's themes
+# when the %{_datadir}/sounds folder is touched.
+# While it's technically not needed to touch the folder itself,
+# the RH rpm still does this so we will too. It may be needed in the
+# future :)
 %post
-touch --no-create %{_datadir}/sounds/freedesktop
+touch --no-create %{_datadir}/sounds %{_datadir}/sounds/freedesktop
 
 %postun
-touch --no-create %{_datadir}/sounds/freedesktop
+touch --no-create %{_datadir}/sounds %{_datadir}/sounds/freedesktop
 
 %files
 %defattr(-,root,root)
