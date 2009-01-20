@@ -1,9 +1,9 @@
 Name: sound-theme-freedesktop
-Version: 0.1
-Release: %mkrel 2
+Version: 0.2
+Release: %mkrel 1
 Summary: freedesktop.org default sound theme
 Group: System/X11
-Source0: http://0pointer.de/public/sound-theme-freedesktop.tar.gz
+Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
 # For details on the licenses used, see README
 License: GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
 Url: http://0pointer.de/public/sound-theme-freedesktop.tar.gz
@@ -41,7 +41,7 @@ touch --no-create %{_datadir}/sounds %{_datadir}/sounds/freedesktop
 
 %files
 %defattr(-,root,root)
-%doc README
+%doc README NEWS
 %dir %{_datadir}/sounds/freedesktop
 %dir %{_datadir}/sounds/freedesktop/stereo
 %{_datadir}/sounds/freedesktop/index.theme
