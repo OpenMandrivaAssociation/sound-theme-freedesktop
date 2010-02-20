@@ -8,6 +8,8 @@ License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
 Url:		http://www.freedesktop.org/wiki/Specifications/sound-theme-spec
 Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
 BuildRequires:	intltool
+BuildRequires:	gettext
+BuildRequires:	perl(XML::Parser)
 BuildArch:	noarch
 Provides:	fdo-sound-theme
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -20,6 +22,7 @@ specification.  (http://0pointer.de/public/sound-theme-spec.html).
 %setup -q
 
 %build
+./autogen.sh
 %configure2_5x
 
 %make
@@ -48,4 +51,4 @@ touch --no-create %{_datadir}/sounds %{_datadir}/sounds/freedesktop
 %dir %{_datadir}/sounds/freedesktop
 %dir %{_datadir}/sounds/freedesktop/stereo
 %{_datadir}/sounds/freedesktop/index.theme
-%{_datadir}/sounds/freedesktop/stereo/*.ogg
+%{_datadir}/sounds/freedesktop/stereo/*.oga
