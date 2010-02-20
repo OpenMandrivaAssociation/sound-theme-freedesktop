@@ -8,7 +8,8 @@ License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
 Url:		http://www.freedesktop.org/wiki/Specifications/sound-theme-spec
 Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
 BuildRequires:	intltool
-BuildRequires:	gettext
+BuildRequires:	gettext-devel 
+BuildRequires:	glib-gettextize
 BuildRequires:	perl(XML::Parser)
 BuildArch:	noarch
 Provides:	fdo-sound-theme
