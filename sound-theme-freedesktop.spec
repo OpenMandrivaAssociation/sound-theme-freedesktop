@@ -1,7 +1,7 @@
 Summary:	freedesktop.org default sound theme
 Name:		sound-theme-freedesktop
 Version:	0.7
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/X11
 # For details on the licenses used, see README
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
@@ -13,6 +13,10 @@ BuildRequires:	glib-gettextize
 BuildRequires:	perl(XML::Parser)
 BuildArch:	noarch
 Provides:	fdo-sound-theme
+Obsoletes:	gnome-audio <= 2.22.2
+Provides:	gnome-audio 
+Obsoletes:	gnome-audio-extra <= 2.22.2
+Provides:	gnome-audio-extra <= 2.22.2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
