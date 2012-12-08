@@ -1,7 +1,7 @@
 Summary:	freedesktop.org default sound theme
 Name:		sound-theme-freedesktop
 Version:	0.7
-Release:	%mkrel 4
+Release:	%mkrel 7
 Group:		System/X11
 # For details on the licenses used, see README
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
@@ -57,3 +57,60 @@ touch --no-create %{_datadir}/sounds %{_datadir}/sounds/freedesktop
 %dir %{_datadir}/sounds/freedesktop/stereo
 %{_datadir}/sounds/freedesktop/index.theme
 %{_datadir}/sounds/freedesktop/stereo/*.oga
+
+
+%changelog
+* Fri May 06 2011 Oden Eriksson <oeriksson@mandriva.com> 0.7-4mdv2011.0
++ Revision: 670000
+- mass rebuild
+
+* Fri Dec 03 2010 Oden Eriksson <oeriksson@mandriva.com> 0.7-3mdv2011.0
++ Revision: 607550
+- rebuild
+
+* Mon Apr 19 2010 Frederic Crozat <fcrozat@mandriva.com> 0.7-2mdv2010.1
++ Revision: 536717
+- gnome-audio is dead, replace it with sound-theme-freedesktop
+
+* Sat Feb 20 2010 Tomasz Pawel Gajc <tpg@mandriva.org> 0.7-1mdv2010.1
++ Revision: 508832
+- fix the package
+- update to new version 0.7
+
+* Fri Aug 28 2009 Colin Guthrie <cguthrie@mandriva.org> 0.6-1mdv2010.0
++ Revision: 421954
+- New version: 0.6
+
+* Thu Aug 27 2009 Colin Guthrie <cguthrie@mandriva.org> 0.5-1mdv2010.0
++ Revision: 421658
+- New version: 0.5
+
+* Tue Aug 25 2009 Tomasz Pawel Gajc <tpg@mandriva.org> 0.4-1mdv2010.0
++ Revision: 420651
+- update to new version 0.4
+
+* Wed Jul 29 2009 Colin Guthrie <cguthrie@mandriva.org> 0.3-1mdv2010.0
++ Revision: 402876
+- New version: 0.3
+
+* Tue Jan 20 2009 Tomasz Pawel Gajc <tpg@mandriva.org> 0.2-1mdv2009.1
++ Revision: 331822
+- use autotools magic ;)
+- ann buildrequires on intltool
+- spec file clean
+- update to new version 0.2
+- fix url for source
+- fix docs
+
+* Sat Sep 13 2008 Colin Guthrie <cguthrie@mandriva.org> 0.1-2mdv2009.0
++ Revision: 284484
+- Update to touch the /usr/share/sounds folder to reload sound themes in libcanberra
+
+* Mon Jul 28 2008 Colin Guthrie <cguthrie@mandriva.org> 0.1-1mdv2009.0
++ Revision: 250737
+- Update group
+- Update summary
+- Add generic provides
+- Import sound-theme-freedesktop (based on RH package by Lennart Pottering)
+
+
