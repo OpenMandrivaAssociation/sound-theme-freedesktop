@@ -26,7 +26,6 @@ specification.  (http://0pointer.de/public/sound-theme-spec.html).
 %setup -q
 
 %build
-./autogen.sh
 %configure2_5x
 
 %make
