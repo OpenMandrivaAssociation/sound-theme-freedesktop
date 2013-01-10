@@ -1,7 +1,7 @@
 Summary:	freedesktop.org default sound theme
 Name:		sound-theme-freedesktop
-Version:	0.7
-Release:	%mkrel 7
+Version:	0.8
+Release:	1
 Group:		System/X11
 # For details on the licenses used, see README
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
@@ -17,7 +17,6 @@ Obsoletes:	gnome-audio <= 2.22.2
 Provides:	gnome-audio 
 Obsoletes:	gnome-audio-extra <= 2.22.2
 Provides:	gnome-audio-extra <= 2.22.2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The default freedesktop.org sound theme following the XDG theming
@@ -33,11 +32,7 @@ specification.  (http://0pointer.de/public/sound-theme-spec.html).
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
-
-%clean
-rm -rf %{buildroot}
 
 # (cg) libcanberra will purge it's cache and reload it's themes
 # when the %{_datadir}/sounds folder is touched.
@@ -51,7 +46,6 @@ touch --no-create %{_datadir}/sounds %{_datadir}/sounds/freedesktop
 touch --no-create %{_datadir}/sounds %{_datadir}/sounds/freedesktop
 
 %files
-%defattr(-,root,root)
 %doc README NEWS
 %dir %{_datadir}/sounds/freedesktop
 %dir %{_datadir}/sounds/freedesktop/stereo
