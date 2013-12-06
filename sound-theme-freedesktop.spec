@@ -1,7 +1,7 @@
 Summary:	freedesktop.org default sound theme
 Name:		sound-theme-freedesktop
 Version:	0.8
-Release:	4
+Release:	5
 Group:		System/X11
 # For details on the licenses used, see README
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
