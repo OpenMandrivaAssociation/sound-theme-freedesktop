@@ -1,7 +1,7 @@
 Summary:	freedesktop.org default sound theme
 Name:		sound-theme-freedesktop
 Version:	0.8
-Release:	13
+Release:	14
 Group:		System/X11
 # For details on the licenses used, see README
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
@@ -13,26 +13,26 @@ BuildRequires:	glib-gettextize
 BuildRequires:	perl(XML::Parser)
 BuildArch:	noarch
 Provides:	fdo-sound-theme
-Obsoletes:	gnome-audio <= 2.22.2
-Provides:	gnome-audio 
-Obsoletes:	gnome-audio-extra <= 2.22.2
-Provides:	gnome-audio-extra <= 2.22.2
-Requires(post,postun):	rpm-helper
+Obsoletes:	gnome-audio < 2.22.3
+Provides:	gnome-audio = 2.22.3
+Obsoletes:	gnome-audio-extra < 2.22.3
+Provides:	gnome-audio-extra = 2.22.3
+Requires(post,postun): coreutils
 
 %description
 The default freedesktop.org sound theme following the XDG theming
-specification.  (http://0pointer.de/public/sound-theme-spec.html).
+specification.
+(http://0pointer.de/public/sound-theme-spec.html).
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%configure2_5x
-
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # (cg) libcanberra will purge it's cache and reload it's themes
 # when the %{_datadir}/sounds folder is touched.
@@ -51,4 +51,3 @@ touch --no-create %{_datadir}/sounds %{_datadir}/sounds/freedesktop
 %dir %{_datadir}/sounds/freedesktop/stereo
 %{_datadir}/sounds/freedesktop/index.theme
 %{_datadir}/sounds/freedesktop/stereo/*.oga
-
