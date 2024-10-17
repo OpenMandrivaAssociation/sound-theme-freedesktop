@@ -5,7 +5,7 @@ Release:	15
 Group:		System/X11
 # For details on the licenses used, see README
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
-Url:		http://www.freedesktop.org/wiki/Specifications/sound-theme-spec
+Url:		https://www.freedesktop.org/wiki/Specifications/sound-theme-spec
 Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
 BuildRequires:	intltool
 BuildRequires:	gettext-devel 
