@@ -7,6 +7,11 @@ Group:		System/X11
 License:	GPLv2+ and LGPLv2+ and CC-BY-SA and CC-BY
 Url:		https://www.freedesktop.org/wiki/Specifications/sound-theme-spec
 Source0:	http://people.freedesktop.org/~mccann/dist/%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	intltool
 BuildRequires:	gettext-devel 
 BuildRequires:	glib-gettextize
